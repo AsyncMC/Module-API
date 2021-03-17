@@ -18,11 +18,10 @@
 
 package com.github.asyncmc.module.api
 
-public enum class ServerLifeStage {
-    CORE_INITIALIZATION,
-
-    MODULE_CONSTRUCTION,
-    MODULE_PRE_INIT,
-    MODULE_INIT,
-    MODULE_POST_INIT,
+/**
+ * @author joserobjr
+ * @since 2021-03-17
+ */
+public interface ModuleAPI {
+    public val module: Module
 }

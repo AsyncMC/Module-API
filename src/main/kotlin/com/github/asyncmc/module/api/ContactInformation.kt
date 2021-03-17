@@ -18,10 +18,11 @@
 
 package com.github.asyncmc.module.api
 
-public interface AsyncMcModule {
-
-    public fun onServerStateChange(newState: ServerLifeStage) {
-
-    }
-
-}
+/**
+ * @author joserobjr
+ * @since 2021-03-16
+ */
+public data class ContactInformation (
+    val name: String,
+    val email: String
+)

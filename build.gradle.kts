@@ -31,7 +31,7 @@ tasks.withType<JavaCompile>().configureEach {
 
 tasks.withType<KotlinCompile>().configureEach {
     kotlinOptions.jvmTarget = "15"
-    kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.contracts.ExperimentalContracts"
+    kotlinOptions.freeCompilerArgs += "-Xopt-in=kotlin.contracts.ExperimentalContracts,kotlin.RequiresOptIn"
 }
 
 tasks.named<JavaCompile>("compileJava") {
@@ -60,6 +60,8 @@ plugins.withType<JavaPlugin>().configureEach {
 dependencies {
     api(kotlin("stdlib-jdk8"))
     api(kotlin("reflect"))
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
+    api("com.michael-bull.kotlin-inline-logger:kotlin-inline-logger:1.0.3")
 
     testImplementation(kotlin("test-junit5"))
 
